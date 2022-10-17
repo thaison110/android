@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans"
+    android:paddingHorizontal="@dimen/size_32">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_boder_around"
+        android:padding="@dimen/size_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lưu ý!"
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20"
+            android:gravity="start"
+            android:text="• Phụ huynh cần kiểm tra và nhập chính xác hình ảnh và thông tin thuốc, tên thuốc, liều lượng và thời gian uống và hạn sử dụng thuốc.
+            \n\n• Trong trường hợp khẩn cấp, nhà trường sẽ ngay lập tức liên hệ theo các thông tin của phụ huynh đã cung cấp để được hỗ trợ kịp thời.
+            \n\n• Với các bé có tiền sử dị ứng hoặc các bệnh đặc biệt, vui lòng cung cấp các thông tin này trong mục ghi chú hoặc nhắc nhở giáo viên của bé."
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <View
+            android:id="@+id/centerLineView"
+            android:layout_width="@dimen/size_1"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitDesc" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="@dimen/size_130"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_32"
+            android:background="@drawable/ripple_clicked"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/size_32"
+            android:paddingVertical="@dimen/size_8"
+            android:text="@string/back"
+            android:textColor="@color/gray_828282"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/centerLineView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitDesc" />
+
+        <TextView
+            android:id="@+id/tvAgree"
+            android:layout_width="@dimen/size_130"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_32"
+            android:background="@drawable/bg_tab_orange_boder_radius_40"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/size_32"
+            android:paddingVertical="@dimen/size_8"
+            android:text="@string/agree"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/centerLineView"
+            app:layout_constraintTop_toBottomOf="@id/tvTitDesc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

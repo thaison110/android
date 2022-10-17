@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_16">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_16"
+            android:drawableStart="@drawable/ic_left_arrow"
+            android:drawablePadding="@dimen/size_8"
+            android:text="@string/label_donve"
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0"
+            android:layout_marginHorizontal="@dimen/size_16"
+            android:layout_marginTop="@dimen/text_size_20"
+            android:layout_marginBottom="@dimen/size_24"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/size_12"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toTopOf="@id/imgDelete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBack">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/size_12">
+
+                <include
+                    android:id="@+id/layoutAvatar"
+                    layout="@layout/common_avatar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_44"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/size_16"
+                    android:paddingVertical="@dimen/size_12"
+                    android:textColor="@color/gray_232323"
+                    android:textColorHint="#BDBDBD"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutAvatar" />
+
+
+                <TextView
+                    android:id="@+id/tv_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_12"
+                    android:background="@drawable/bg_gray_boder_radius_8"
+                    android:drawablePadding="@dimen/size_8"
+                    android:paddingHorizontal="@dimen/size_36"
+                    android:paddingVertical="@dimen/size_12"
+                    android:text="Mẹ"
+                    android:textColor="@color/blue_005CC8"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="@dimen/size_56"
+            android:layout_height="@dimen/size_56"
+            android:layout_marginBottom="@dimen/size_32"
+            android:background="@drawable/ripple_clicked"
+            android:padding="@dimen/size_6"
+            android:src="@drawable/ic_floating_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

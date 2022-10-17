@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingVertical="@dimen/size_8"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_selected"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintTop_toTopOf="@id/tv_value"
+        app:layout_constraintBottom_toBottomOf="@id/tv_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_selected"/>
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_8"
+        android:text="Tất cả"
+        android:textColor="@color/blue_005CC8"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/img_selected"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

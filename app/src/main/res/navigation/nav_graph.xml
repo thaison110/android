@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/absenceFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.absence.AbsenceFragment"
+        tools:layout="@layout/fragment_absence"/>
+
+    <fragment android:id="@+id/createAbsenceFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.absence.CreateAbsenceFragment"
+        tools:layout="@layout/fragment_create_absence"/>
+
+    <fragment android:id="@+id/mainFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.main.MainFragment"
+        tools:layout="@layout/fragment_main"/>
+
+    <fragment android:id="@+id/chatListFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.chat.ChatListFragment"
+        tools:layout="@layout/fragment_chat_list"/>
+
+    <fragment android:id="@+id/chatFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.chat.ChatFragment"
+        tools:layout="@layout/fragment_chat"/>
+
+    <fragment android:id="@+id/feeFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.fee.FeeFragment"
+        tools:layout="@layout/fragment_fee"/>
+
+    <fragment android:id="@+id/feeDetailFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.fee.FeeDetailFragment"
+        tools:layout="@layout/fragment_fee_detail"/>
+
+    <fragment android:id="@+id/newsListFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.news.NewsListFragment"
+        tools:layout="@layout/fragment_news_list"/>
+
+    <fragment android:id="@+id/newsDetailFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.news.NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail"/>
+
+    <fragment android:id="@+id/todayActivityFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.activities.TodayActivityFragment"
+        tools:layout="@layout/fragment_activity_today"/>
+
+    <fragment android:id="@+id/childrenInfoFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.info.ChildrenInfoFragment"
+        tools:layout="@layout/fragment_index_info"/>
+
+    <fragment android:id="@+id/donVeFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.feature.donve.DonVeFragment"
+        tools:layout="@layout/fragment_don_ve"/>
+
+    <fragment android:id="@+id/createDonDonFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.feature.donve.dondon.CreateDonDonFragment"
+        tools:layout="@layout/fragment_create_don_don"/>
+
+    <fragment android:id="@+id/createHomieFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.feature.donve.nguoidon.CreateHomieFragment"
+        tools:layout="@layout/fragment_create_nguoi_don"/>
+
+    <fragment android:id="@+id/infoHomieFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.feature.donve.nguoidon.HomieInfoFragment"
+        tools:layout="@layout/fragment_homie_info"/>
+
+    <fragment android:id="@+id/searchTeacher"
+        android:name="com.sonnv.kidsonline.ui.fragment.chat.TeacherListFragment"
+        tools:layout="@layout/fragment_teacher_list"/>
+
+    <fragment android:id="@+id/changePassword"
+        android:name="com.sonnv.kidsonline.ui.fragment.profile.ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password"/>
+
+    <fragment android:id="@+id/medicineFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.medicine.MedicineFragment"
+        tools:layout="@layout/fragment_medicine_list"/>
+
+    <fragment android:id="@+id/medicineDetailFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.medicine.MedicineDetailFragment"
+        tools:layout="@layout/fragment_medicine_detail"/>
+
+    <fragment android:id="@+id/medicineCreateFragment"
+        android:name="com.sonnv.kidsonline.ui.fragment.medicine.CreateMedicineFragment"
+        tools:layout="@layout/fragment_medicine_create"/>
+</navigation>

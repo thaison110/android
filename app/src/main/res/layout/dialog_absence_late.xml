@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/size_12">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/size_12"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin ngày"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_14"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F5F5F5"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_12"
+            android:text="Thứ Ba, Ngày 14/08/2022"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@drawable/bg_border_2dp_green"
+            android:paddingHorizontal="@dimen/size_23"
+            android:paddingVertical="@dimen/size_8"
+            android:text="@string/label_absence_cophep"
+            android:textColor="@color/green_27AE60"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDay" />
+
+        <TextView
+            android:id="@+id/tvReason"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_12"
+            android:text="Bé được xác nhận vào lớp lúc\n09:40, ngày 19/08/2022"
+            android:textAlignment="center"
+            android:textColor="@color/gray_828282"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_12"
+            android:text="Bé được xác nhận vào lớp lúc\n09:40, ngày 19/08/2022"
+            android:textAlignment="center"
+            android:textColor="@color/gray_828282"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReason" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_12"
+            android:background="@drawable/bg_corner_border_1dp"
+            android:paddingBottom="@dimen/size_12"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvContent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutTopActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size_12"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ball"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoạt động của bé trong ngày"
+                    android:textColor="@color/gray_828282"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/layoutTopActivity" />
+
+            <include
+                layout="@layout/item_time_line_activity_today_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTopActivity"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/size_16"
+    android:paddingTop="@dimen/size_21">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_fee"
+        android:drawableStart="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/size_8"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gray_boder_radius_8"
+        android:drawableEnd="@drawable/ic_down_arrow"
+        android:drawablePadding="@dimen/size_8"
+        android:paddingHorizontal="@dimen/size_8"
+        android:paddingVertical="@dimen/size_4"
+        android:text="Năm 2022"
+        android:textColor="@color/blue_005CC8"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_tuition_fee_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

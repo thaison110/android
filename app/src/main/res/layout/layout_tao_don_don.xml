@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="@dimen/size_120"
+    android:layout_height="@dimen/size_125"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/color_EEFFE9"
+    app:cardCornerRadius="@dimen/size_12">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/size_8"
+        android:paddingTop="@dimen/size_5"
+        android:paddingBottom="@dimen/size_12">
+
+        <ImageView
+            android:id="@+id/imv"
+            android:layout_width="@dimen/size_44"
+            android:layout_height="@dimen/size_44"
+            android:src="@drawable/ic_clock_don_dung"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTaoDon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_3"
+            android:text="@string/taoDonText"
+            android:textColor="@color/gray_4F4F4F"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imv" />
+
+        <TextView
+            android:id="@+id/tvDon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_3"
+            android:text="@string/donDungGioText"
+            android:textColor="@color/color_27AE60"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTaoDon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

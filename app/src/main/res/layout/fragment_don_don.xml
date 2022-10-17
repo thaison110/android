@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.feature.donve.dondon.DonDonFragment">
+
+    <include
+        android:id="@+id/cardDonDung"
+        layout="@layout/layout_tao_don_don"
+        android:layout_width="@dimen/size_120"
+        android:layout_height="@dimen/size_125"
+        app:layout_constraintEnd_toStartOf="@+id/cardDonSom"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/cardDonSom"
+        layout="@layout/layout_tao_don_don"
+        android:layout_width="@dimen/size_120"
+        android:layout_height="@dimen/size_125"
+        app:layout_constraintEnd_toStartOf="@+id/cardDonMuon"
+        app:layout_constraintStart_toEndOf="@id/cardDonDung"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/cardDonMuon"
+        layout="@layout/layout_tao_don_don"
+        android:layout_width="@dimen/size_120"
+        android:layout_height="@dimen/size_125"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardDonSom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/layoutCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        android:layout_marginTop="@dimen/size_12"
+        android:background="@drawable/bg_border_0a000000_radius_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardDonSom" />
+
+    <ImageView
+        android:id="@+id/backCalendar"
+        android:layout_width="@dimen/size_26"
+        android:layout_height="@dimen/size_26"
+        android:layout_marginStart="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_12"
+        android:background="@drawable/bg_circle_f2f2f2"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="@id/layoutCalendar"
+        app:layout_constraintTop_toTopOf="@id/layoutCalendar" />
+
+    <TextView
+        android:id="@+id/tvCalendar"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_8"
+        android:layout_marginTop="@dimen/size_8"
+        android:background="@drawable/bg_border_0a000000_radius_12"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingVertical="@dimen/size_8"
+        android:text="Tháng 9, 2022"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/continuteCalendar"
+        app:layout_constraintStart_toEndOf="@id/backCalendar"
+        app:layout_constraintTop_toTopOf="@id/layoutCalendar" />
+
+    <ImageView
+        android:id="@+id/continuteCalendar"
+        android:layout_width="@dimen/size_26"
+        android:layout_height="@dimen/size_26"
+        android:layout_marginTop="@dimen/size_12"
+        android:layout_marginEnd="@dimen/size_20"
+        android:background="@drawable/bg_circle_f2f2f2"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_continute"
+        app:layout_constraintEnd_toEndOf="@id/layoutCalendar"
+        app:layout_constraintTop_toTopOf="@id/layoutCalendar" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginTop="@dimen/size_8"
+        android:background="@color/color_0A000000"
+        app:layout_constraintEnd_toEndOf="@id/layoutCalendar"
+        app:layout_constraintStart_toStartOf="@id/layoutCalendar"
+        app:layout_constraintTop_toBottomOf="@id/tvCalendar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvCalendar"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        android:paddingBottom="@dimen/size_16"
+        android:layout_marginHorizontal="@dimen/size_1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/layoutCalendar"
+        app:layout_constraintEnd_toEndOf="@id/layoutCalendar"
+        app:layout_constraintStart_toStartOf="@id/layoutCalendar"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNoti"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/color_FFFAF4"
+        app:cardCornerRadius="@dimen/size_12"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/size_12">
+
+            <ImageView
+                android:id="@+id/imvBell"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@drawable/ic_bell"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_8"
+                android:text="Sắp đến giờ đón bé hôm nay"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintStart_toEndOf="@id/imvBell"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_8"
+                android:text="17:30"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

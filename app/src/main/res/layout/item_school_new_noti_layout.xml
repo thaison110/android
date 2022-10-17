@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size_16"
+    android:background="@drawable/bg_gray_boder_radius_16">
+
+    <ImageView
+        android:id="@+id/img_ball"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_marginStart="@dimen/size_12"
+        android:layout_marginTop="@dimen/size_12"
+        android:src="@drawable/ic_graduate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_activity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:text="Nhà trường đăng một thông báo mới"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintBottom_toBottomOf="@id/img_ball"
+        app:layout_constraintStart_toEndOf="@id/img_ball"
+        app:layout_constraintTop_toTopOf="@id/img_ball" />
+
+    <ImageView
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_marginEnd="@dimen/size_12"
+        android:padding="@dimen/size_4"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/img_ball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_ball" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginTop="@dimen/size_12"
+        android:background="#0A000000"
+        app:layout_constraintTop_toBottomOf="@id/img_ball" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="@dimen/size_120"
+            app:cardCornerRadius="@dimen/size_8"
+            app:cardElevation="@dimen/size_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgThumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_1" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:background="@drawable/bg_main_boder_radius_16"
+            android:drawableStart="@drawable/ic_star"
+            android:drawableTint="@color/yellơ_FFC312"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/size_12"
+            android:paddingVertical="@dimen/size_2"
+            android:text="@string/important"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintStart_toEndOf="@id/card_image"
+            app:layout_constraintTop_toTopOf="@id/card_image" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_4"
+            android:text="13 giờ trước"
+            android:textColor="@color/gray_828282"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintStart_toEndOf="@id/tv_important"
+            app:layout_constraintTop_toTopOf="@id/card_image" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_12"
+            android:layout_marginTop="@dimen/size_12"
+            android:text="Thông báo kế hoạch tổ chức dã ngoại học kỳ II cho các bé Lớp A3"
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_image"
+            app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+        <include
+            layout="@layout/common_reaction_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/card_image"
+            app:layout_constraintStart_toStartOf="@id/tv_important" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

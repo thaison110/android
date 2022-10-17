@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gray_boder_radius_12"
+    android:layout_marginVertical="@dimen/size_6"
+    android:padding="@dimen/size_12">
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="@dimen/size_44"
+        android:layout_height="@dimen/size_44"
+        android:src="@drawable/image_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:text="Cô Thúy Hạnh"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_18"
+        android:drawablePadding="@dimen/size_8"
+        android:drawableEnd="@drawable/ic_tick"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/img_avatar"
+        app:layout_constraintTop_toTopOf="@id/img_avatar" />
+
+    <TextView
+        android:id="@+id/tvShortMess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Nay bé hơi bị ho, anh chị để ý bé nhé..."
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintBottom_toBottomOf="@id/img_avatar"
+        app:layout_constraintStart_toEndOf="@id/img_avatar" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 phút trước"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_avatar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

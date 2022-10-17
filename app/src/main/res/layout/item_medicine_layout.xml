@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/size_6"
+    android:background="@drawable/bg_gray_boder_radius_12"
+    android:padding="@dimen/size_12">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAvatar"
+        android:layout_width="@dimen/size_44"
+        android:layout_height="@dimen/size_44"
+        app:cardCornerRadius="@dimen/size_22"
+        app:cardElevation="@dimen/size_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/size_44"
+            android:layout_height="@dimen/size_44"
+            android:src="@drawable/image_3" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:drawablePadding="@dimen/size_8"
+        android:text="02/10/2022"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/cardAvatar"
+        app:layout_constraintTop_toTopOf="@id/cardAvatar" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:text="Nay bé hơi bị ho, anh chị để ý bé nhé..."
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintBottom_toBottomOf="@id/cardAvatar"
+        app:layout_constraintStart_toEndOf="@id/cardAvatar" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginTop="@dimen/size_12"
+        android:background="#0D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardAvatar" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nay bé hơi bị ho, anh chị để ý bé nhé..."
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        android:layout_marginTop="@dimen/size_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/cardAvatar"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintWidth="@dimen/size_0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

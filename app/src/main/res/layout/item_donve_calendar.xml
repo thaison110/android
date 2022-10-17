@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingHorizontal="@dimen/size_20">
+
+    <TextView
+        android:layout_marginTop="@dimen/size_12"
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="54564564856"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNguoiDon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_3"
+        android:text="Me"
+        android:textColor="@color/blue_005CC8"
+        android:textSize="@dimen/text_size_13"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_8"
+        android:text="Don som"
+        android:textColor="@color/color_FF7917"
+        android:textSize="@dimen/text_size_13"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvNguoiDon"
+        app:layout_constraintTop_toTopOf="@id/tvNguoiDon" />
+
+    <TextView
+        android:id="@+id/tvCreateTime"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_8"
+        android:layout_marginEnd="@dimen/size_14"
+        android:text="Đã tạo lúc 16:12, 15/08/2022"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintEnd_toStartOf="@+id/imvArrow"
+        app:layout_constraintStart_toEndOf="@id/tvType"
+        app:layout_constraintTop_toTopOf="@id/tvNguoiDon" />
+
+    <ImageView
+        android:id="@+id/imvArrow"
+        android:layout_width="@dimen/size_12"
+        android:layout_height="@dimen/size_12"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/color_0A000000"
+        android:layout_marginTop="@dimen/size_12"
+        app:layout_constraintTop_toBottomOf="@id/tvType"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

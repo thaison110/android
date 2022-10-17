@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size_12"
+    android:background="@drawable/bg_boder_fee_radius_12"
+    android:paddingHorizontal="@dimen/size_20"
+    android:paddingVertical="@dimen/size_12">
+
+    <TextView
+        android:id="@+id/tv_lablel_fee"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:text="Học phí kì II - 2022"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tv_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/unpaidStatus"
+        android:textColor="@color/red_FF5959"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_lablel_fee"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_total_lable"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_8"
+        android:text="@string/totalFeeLabel"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toStartOf="@id/tv_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lablel_fee" />
+
+    <TextView
+        android:id="@+id/tv_total_value"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="@dimen/size_8"
+        android:text="28.500.000đ"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_total_lable"
+        app:layout_constraintTop_toBottomOf="@id/tv_lablel_fee" />
+
+    <TextView
+        android:id="@+id/tv_paid_lable"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_8"
+        android:text="@string/paidStatus"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toStartOf="@id/tv_paid_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_lable" />
+
+    <TextView
+        android:id="@+id/tv_paid_value"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="@dimen/size_8"
+        android:text="0"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_paid_lable"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_lable" />
+
+    <View
+        android:id="@+id/dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginTop="@dimen/size_8"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_paid_lable" />
+
+    <TextView
+        android:id="@+id/tv_debt_lable"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_8"
+        android:text="@string/debtLabel"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toStartOf="@id/tv_debt_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_line" />
+
+    <TextView
+        android:id="@+id/tv_debt_value"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="@dimen/size_8"
+        android:text="28.500.000đ"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_debt_lable"
+        app:layout_constraintTop_toBottomOf="@id/dotted_line" />
+
+    <TextView
+        android:id="@+id/tv_deadline_lable"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_8"
+        android:text="@string/deadlineLabel"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toStartOf="@id/tv_deadline_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_debt_lable" />
+
+    <TextView
+        android:id="@+id/tv_deadline_value"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="@dimen/size_8"
+        android:text="08/12/2022"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_deadline_lable"
+        app:layout_constraintTop_toBottomOf="@id/tv_debt_lable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

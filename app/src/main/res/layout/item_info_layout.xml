@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_feild_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/size_18"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_feild_label"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:drawableLeft="@drawable/ic_union"
+            android:drawablePadding="@dimen/size_12"
+            android:paddingVertical="@dimen/size_13"
+            android:text="Ngày sinh"
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_15" />
+
+        <EditText
+            android:id="@+id/tv_feild_value"
+            android:focusable="true"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:paddingVertical="@dimen/size_13"
+            android:background="@null"
+            android:text="Ngày sinh"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            android:textColor="@color/gray_232323"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/color_F2F2F2"
+        app:layout_constraintTop_toBottomOf="@+id/ll_feild_info" />
+</androidx.constraintlayout.widget.ConstraintLayout>

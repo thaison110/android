@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/size_12"
+    android:paddingVertical="@dimen/size_16">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_left_arrow"
+        android:drawablePadding="@dimen/size_8"
+        android:text="@string/label_danthuoc"
+        android:textColor="@color/gray_232323"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginBottom="@dimen/size_16"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/size_12"
+        app:cardElevation="@dimen/size_8"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintHeight="0dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/btnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                android:paddingHorizontal="@dimen/size_20"
+                android:paddingVertical="@dimen/size_12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày bắt đầu uống"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16 thg 08, 2022"
+                    android:textColor="@color/orange_FF7917"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#0A000000" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/size_20"
+                android:paddingVertical="@dimen/size_12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đến ngày"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19 thg 08, 2022"
+                    android:textColor="@color/orange_FF7917"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#0A000000" />
+
+            <TextView
+                android:id="@+id/tvAddMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginBottom="@dimen/size_12"
+                android:background="@drawable/ripple_clicked"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="@dimen/size_12"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/size_48"
+                android:paddingVertical="@dimen/size_12"
+                android:text="@string/label_add_medicine"
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutVpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_200"
+                    android:layout_marginTop="@dimen/size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_12"
+                    android:background="@drawable/bg_view_detail_radius_12"
+                    android:paddingHorizontal="@dimen/size_16"
+                    android:paddingVertical="@dimen/size_4"
+                    android:text="@string/label_view_detail"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15"
+                    app:layout_constraintEnd_toEndOf="@id/vpg"
+                    app:layout_constraintTop_toTopOf="@id/vpg" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_8"
+                    android:layout_marginBottom="@dimen/size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="#0A000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_12"
+                android:text="@string/label_medicine_note"
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_16"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_12"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="Thêm ghi chú dặn thuốc"
+                android:minHeight="@dimen/size_150"
+                android:padding="@dimen/size_12"
+                android:textColor="@color/gray_232323"
+                android:textColorHint="@color/gray_828282"
+                android:textSize="@dimen/text_size_15" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_32"
+        android:background="@drawable/bg_tab_orange_boder_radius_40"
+        android:paddingHorizontal="@dimen/size_24"
+        android:paddingVertical="@dimen/size_12"
+        android:text="@string/label_danthuoc_create"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

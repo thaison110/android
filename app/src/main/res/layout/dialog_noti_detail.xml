@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet"
+        android:theme="@style/AppBottomSheetDialogTheme"
+        android:paddingBottom="@dimen/size_20">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/size_12"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="@dimen/size_44"
+                android:layout_height="@dimen/size_44"
+                android:layout_marginStart="@dimen/size_12"
+                android:src="@drawable/ic_bql"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:text="BQL Nhà Trường"
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/img_avatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDatetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gửi vào 07:17, ngày 15/08/2022"
+                android:textColor="@color/gray_828282"
+                android:textSize="@dimen/text_size_15"
+                app:layout_constraintBottom_toBottomOf="@id/img_avatar"
+                app:layout_constraintStart_toEndOf="@id/img_avatar"
+                app:layout_constraintStart_toStartOf="@id/tvName" />
+
+            <ImageView
+                android:id="@+id/btCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_14"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="#F5F5F5"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_12"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:text="Xác nhận đã hoàn thành việc đóng học phí kỳ I - 2022"
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginTop="@dimen/size_12"
+                android:text="BQL Nhà Trường chân thành cảm ơn quý phụ huynh đã tiếp tục tin tưởng đồng hành cùng chúng tôi trong hành trình nuôi dạy các con lớn khôn."
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tvDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginTop="@dimen/size_12"
+                android:text="Trong học kỳ tới, chúng tôi sẽ triển khai chương trình giáo dục đặc biệt với những bước tiến và cải cách quan trọng, chú tâm vào việc phát triển các kỹ năng mềm và năng khiếu cho trẻ từ khi còn rất nhỏ. Với những thay đổi này, hy vọng, các bé sẽ tiếp tục có một hành trình trưởng thành một cách vui vẻ, hạnh phúc và mới mẻ."
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tvDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_12"
+                android:layout_marginTop="@dimen/size_12"
+                android:text="Một lần nữa chân thành cảm ơn sự đồng hành của quý phụ huynh!"
+                android:textColor="@color/gray_232323"
+                android:textSize="@dimen/text_size_15" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

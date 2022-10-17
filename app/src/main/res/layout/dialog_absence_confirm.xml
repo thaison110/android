@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/size_12"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác nhận ngày nghỉ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_12"
+                android:layout_marginEnd="@dimen/size_14"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F5F5F5"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_12"
+            android:text="Thứ Ba, Ngày 14/08/2022"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_20"
+            android:layout_marginTop="@dimen/size_12"
+            android:background="@drawable/bg_corner_2dp"
+            android:hint="Nhập lí do xin nghỉ"
+            android:inputType="text"
+            android:id="@+id/edtAbsence"
+            android:padding="@dimen/size_12"
+            android:textColorHint="@color/gray_828282"
+            app:layout_constraintTop_toBottomOf="@id/tvDay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/size_24"
+            android:paddingVertical="@dimen/size_12"
+            android:text="Gửi xác nhận"
+            android:background="@drawable/bg_button_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:id="@+id/btConfirm"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/edtAbsence"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/size_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/size_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gray_boder_radius_16">
+
+    <ImageView
+        android:id="@+id/img_ball"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_marginStart="@dimen/size_12"
+        android:layout_marginTop="@dimen/size_12"
+        android:src="@drawable/ic_ball"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_activity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_12"
+        android:text="Hoạt động hôm nay (15/08/2022)"
+        android:textColor="@color/gray_828282"
+        android:textSize="@dimen/text_size_13"
+        app:layout_constraintBottom_toBottomOf="@id/img_ball"
+        app:layout_constraintStart_toEndOf="@id/img_ball"
+        app:layout_constraintTop_toTopOf="@id/img_ball" />
+
+    <ImageView
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:layout_marginEnd="@dimen/size_12"
+        android:padding="@dimen/size_4"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/img_ball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_ball" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_marginTop="@dimen/size_12"
+        android:background="#0A000000"
+        app:layout_constraintTop_toBottomOf="@id/img_ball" />
+
+    <LinearLayout
+        android:id="@+id/ll_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <include
+            layout="@layout/item_time_line_activity_today_2"
+            android:background="@color/color_FFFAF4"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
